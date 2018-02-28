@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Contact
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+   
+    <ion-item>
+      <button ion-button  large (click)="register()">
+          <ion-icon name="md-paw"></ion-icon> &nbsp;
+        Register With Email
+       
+      </button>
+    </ion-item>
+    <ion-item>
+      <button ion-button  large color="primary" (click)="login()">
+          <ion-icon name="md-finger-print"></ion-icon> &nbsp;
+        Login With Email
+        
+      </button>
+    </ion-item>
+    <ion-item>
+        <button ion-button large color="primary" (click)="loginWithFacebook()">
+            <ion-icon name="logo-facebook"></ion-icon> &nbsp;
+          Login With Facebook
+          
+        </button>
+      </ion-item>
+    <ion-item>
+      <button ion-button  large color="danger" (click)="signout()">
+          <ion-icon name="md-exit"></ion-icon> &nbsp;
+        Sign Out
+       
+      </button>
+    </ion-item>
+  </ion-list>
+</ion-content>

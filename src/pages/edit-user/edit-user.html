@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Update Profile
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<form #updateUser="ngForm" (submit)="OnSubmit(updateUser)">
+		<ion-list>
+      <ion-input type="hidden" name="key" #username="ngModel" [(ngModel)]="users.key" required></ion-input>
+		  <ion-item>
+		    <ion-label floating>Username</ion-label>
+		    <ion-input type="text" name="username" #username="ngModel" [(ngModel)]="users.username" required></ion-input>
+      </ion-item>
+      
+		  <ion-item>
+		    <ion-label floating>Age</ion-label>
+		    <ion-input type="text" name="age" #age="ngModel" [(ngModel)]="users.age" required></ion-input>
+		  </ion-item>
+
+		  <ion-item>
+		    <ion-label floating>Function</ion-label>
+		    <ion-input type="text" name="function" #function="ngModel" [(ngModel)]="users.function" required></ion-input>
+		  </ion-item>
+
+		</ion-list>
+
+		<div padding>
+		  <button ion-button block type="submit" [disabled]="!updateUser.valid">Save Changes</button>
+		</div>
+	</form>
+</ion-content>

@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Create New USer
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<form #addNewUser="ngForm" (submit)="OnSubmit(addNewUser)">
+		<ion-list>
+
+		  <ion-item>
+		    <ion-label floating>Username</ion-label>
+		    <ion-input type="text" name="username" #username="ngModel" [(ngModel)]="user.username" required></ion-input>
+		  </ion-item>
+
+		  <ion-item>
+		    <ion-label floating>Password</ion-label>
+		    <ion-input type="password" name="pword" #pword="ngModel" [(ngModel)]="user.pword" required></ion-input>
+		  </ion-item>
+
+		  <ion-item>
+		    <ion-label floating>Age</ion-label>
+		    <ion-input type="text" name="age" #age="ngModel" [(ngModel)]="user.age" required></ion-input>
+		  </ion-item>
+
+		  <ion-item>
+		    <ion-label floating>Function</ion-label>
+		    <ion-input type="text" name="function" #function="ngModel" [(ngModel)]="user.function" required></ion-input>
+		  </ion-item>
+
+		</ion-list>
+
+		<div padding>
+		  <button ion-button block type="submit" [disabled]="!addNewUser.valid">Save Changes</button>
+		</div>
+	</form>
+</ion-content>
